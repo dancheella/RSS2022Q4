@@ -6,6 +6,7 @@
 @font-face {
     font-family: 'Inter';
     src: url("assets/fonts/Inter-Regular.ttf");
+    font-weight: 400;
 }
 
 @font-face {
@@ -17,6 +18,7 @@
 @font-face {
     font-family: 'Inika';
     src: url("assets/fonts/Inika-Regular.ttf");
+    font-weight: 400;
 }
 
 body {
@@ -37,6 +39,7 @@ body {
 .header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -56,6 +59,10 @@ body {
     margin-right: 46px;
 }
 
+.menu-item:last-child {
+    margin-right: 0;
+}
+
 .menu-link {
     display: flex;
     align-items: center;
@@ -63,4 +70,65 @@ body {
     font-size: 16px;
     line-height: 50px;
     color: #010201;
+    font-weight: 400;
+}
+
+.menu-link:hover {
+    color: #E06733;
+    font-weight: 700;
+}
+
+.welcome {
+    background: #EDF2EC;
+    padding: 62px 109px 63px 109px;
+}
+
+.welcome .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.welcome-info h1 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+    color: #717171;
+    max-width: 549px;
+    margin-bottom: 42px;
+}
+
+.welcome-info h1 span {
+    color: #499A18;
+}
+
+.welcome-text {
+    font-size: 20px;
+    line-height: 35px;
+    color: #636060;
+    max-width: 526px;
+    margin-bottom: 48px;
+}
+
+.welcome-button {
+    border: 2px solid #E06733;
+    border-radius: 10px;
+    padding: 14px 27px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
 }
