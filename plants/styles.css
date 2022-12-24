@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("assets/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("assets/fonts/Inter-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Inika';
+    src: url("assets/fonts/Inika-Regular.ttf");
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    background: #EDF2EC;
+    font-family: 'Inika', sans-serif;
+    padding: 42px 109px 42px 111px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu-item {
+    margin-right: 46px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 50px;
+    color: #010201;
+}
