@@ -12,7 +12,7 @@
 @font-face {
     font-family: 'Inter';
     src: url("assets/fonts/Inter-Bold.ttf");
-    font-weight: bold;
+    font-weight: 700;
 }
 
 @font-face {
@@ -21,8 +21,13 @@
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 .header {
@@ -70,7 +75,6 @@ body {
     font-size: 16px;
     line-height: 50px;
     color: #010201;
-    font-weight: 400;
 }
 
 .menu-link:hover {
@@ -131,4 +135,43 @@ body {
     line-height: 20px;
     color: #000000;
     text-decoration: none;
+}
+
+.about {
+    background: #FFFFFF;
+    padding: 93px 109px 94px 109px;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-info h2 {
+    font-family: 'Inika', sans-serif;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    max-width: 463px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.about-info h2 span {
+    color: #E06733;
+}
+
+.about-text {
+    font-size: 20px;
+    line-height: 30px;
+    color: #636060;
+    max-width: 605px;
 }
