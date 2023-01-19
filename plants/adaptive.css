@@ -1,4 +1,4 @@
-/* 1024 - 1220 */
+/* 1024px - 1220px */
 @media screen and (max-width: 1220px) {
     .header {
         padding: 35px 0;
@@ -88,7 +88,7 @@
     }
 }
 
-/* 768 - 1023 */
+/* 768px - 1023px */
 @media screen and (max-width: 1023px) {
     .welcome {
         padding: 40px 0 70px 0;
@@ -207,7 +207,7 @@
     }
 }
 
-/*425 - 767*/
+/* 610px - 767px */
 @media screen and (max-width: 767px) {
     .container {
         padding-left: 25px;
@@ -246,10 +246,6 @@
         margin: 0;
     }
 
-    .service__items {
-        justify-content: center;
-    }
-
     .prices__container {
         justify-content: center;
     }
@@ -259,7 +255,14 @@
     }
 }
 
-/*381 - 424*/
+/* 425px - 609px */
+@media screen and (max-width: 609px) {
+    .service__items {
+        justify-content: center;
+    }
+}
+
+/* 381px - 424px */
 @media screen and (max-width: 424px) {
     .welcome {
         padding: 24px 0;
@@ -397,7 +400,7 @@
     }
 }
 
-/* 360 - 380 */
+/* 360px - 380px */
 @media screen and (max-width: 380px) {
     .header__container {
         flex-direction: row;
