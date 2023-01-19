@@ -456,7 +456,7 @@
         left: -100%;
         height: 100%;
         width: 100%;
-        background-color: rgba(237, 242, 236, 0.95);
+        background-color: rgba(237, 242, 236, 0.5);
         display: block;
         overflow: auto;
         transition: all .5s;
@@ -475,6 +475,7 @@
         flex-direction: column;
         margin: auto;
         padding: 30px;
+        background-color: rgba(237, 242, 236, 0.95);
     }
 
     .menu__item {
