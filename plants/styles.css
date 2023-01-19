@@ -478,7 +478,7 @@ body {
     height: 50px;
     width: 450px;
     background-color: #D6E7D2;
-    box-shadow: 0px 4px 4px 0px #00000040;
+    box-shadow: 0 4px 4px 0 #00000040;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -549,12 +549,4 @@ body {
 
 .footer__icons svg:first-child {
     margin-left: 0;
-}
-
-.header__burger {
-    display: none;
-}
-
-.menu__close {
-    display: none;
 }

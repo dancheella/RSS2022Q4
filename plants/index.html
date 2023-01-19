@@ -28,51 +28,34 @@
                     <span class="logo__title">Plants</span>
                 </a>
             </div>
-            <nav class="menu" id="menu">
-                <div class="menu__close">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 492 492"
-                        style="enable-background:new 0 0 492 492;" xml:space="preserve">
-                        <g>
-                            <g>
-                                <path
-                                    d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-                                    c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-                                    c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-                                    L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
-                                    c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
-                                    c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-                                    c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" />
-                            </g>
-                        </g>
-                    </svg>
+            <div class="menu">
+                <div class="header__burger">
+                    <span class="header__burger-span"></span>
+                    <span class="header__burger-span"></span>
+                    <span class="header__burger-span"></span>
+                    <span class="header__burger-span"></span>
                 </div>
-                <ul class="menu__list">
-                    <li class="menu__item">
-                        <a class="menu__link" href="#welcome">Home</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#about">About us</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#service">Service</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#prices">Price</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#contacts">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__burger" id="burger">
-                <svg class="header__burger-svg" width="40" height="26" viewBox="0 0 40 26" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <line y1="1" x2="40" y2="1" stroke="#717171" stroke-width="2" />
-                    <line y1="9" x2="40" y2="9" stroke="#717171" stroke-width="2" />
-                    <line y1="17" x2="40" y2="17" stroke="#717171" stroke-width="2" />
-                    <line y1="25" x2="40" y2="25" stroke="#717171" stroke-width="2" />
-                </svg>
+                <nav class="menu__body" id="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#welcome">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#about">About us</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#service">Service</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#prices">Price</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#contacts">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+
         </div>
     </header>
 
@@ -245,7 +228,7 @@
             <div class="footer__data">
                 <span class="footer__data-span">©</span>
                 <span class="footer__data-span">2022</span>
-                <a class="footer__data-a" href="https://github.com/dancheella" class="footer-link">github</a>
+                <a class="footer__data-a" href="https://github.com/dancheella">github</a>
             </div>
             <div class="footer__title">
                 <a class="footer__title-a" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
@@ -279,19 +262,9 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('burger').onclick = function () {
-            document.getElementById('menu').classList.add('menu__open');
-        }
+    <script src="js/script.js"></script>
 
-        document.querySelectorAll('#menu *  ').forEach((item) => {
-            item.onclick = () => {
-                document.getElementById('menu').classList.remove('menu__open');
-            }
-        })
-    </script>
-
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 
