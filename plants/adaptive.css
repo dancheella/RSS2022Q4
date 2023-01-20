@@ -147,7 +147,7 @@
     }
 
     .about__info-text {
-        width: 668px;
+        max-width: 668px;
         margin-top: 40px;
     }
 
@@ -230,12 +230,6 @@
 
     .welcome__image {
         display: none;
-    }
-
-    .about__info-text {
-        max-width: 330px;
-        font-size: 25px;
-        line-height: 33px;
     }
 
     .button_service {
