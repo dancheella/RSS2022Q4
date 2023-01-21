@@ -91,7 +91,7 @@
 /* 768px - 1023px */
 @media screen and (max-width: 1023px) {
     .welcome {
-        padding: 40px 0 70px 0;
+        padding: 37px 0 70px 0;
     }
 
     .welcome__container {
@@ -119,15 +119,18 @@
 
     .welcome__info-title {
         font-size: 35px;
+        margin-bottom: 31px;
     }
 
     .welcome__info-text {
         font-size: 16px;
         line-height: 25px;
+        margin-bottom: 35px;
+        margin-left: 5px;
     }
 
     .about {
-        padding-top: 40px;
+        padding: 40px 0 91px 0;
     }
 
     .about__container {
@@ -148,7 +151,7 @@
 
     .about__info-text {
         max-width: 668px;
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     .about__image {
@@ -164,10 +167,57 @@
         width: 280px;
     }
 
+    .first {
+        background-image: url("assets/img/image_for_768px/first768px.png");
+    }
+    .second {
+        background-image: url("assets/img/image_for_768px/second768px.png");
+    }
+
+    .third {
+        background-image: url("assets/img/image_for_768px/third768px.png");
+    }
+
+    .fourth {
+        background-image: url("assets/img/image_for_768px/fourth768px.png");
+    }
+
+    .fifth {
+        background-image: url("assets/img/image_for_768px/fifth768px.png");
+    }
+
+    .sixth {
+        background-image: url("assets/img/image_for_768px/sixth768px.png");
+    }
+
+    .service__menu-title {
+        font-size: 35px;
+        line-height: 46px;
+        margin-bottom: 42px;
+    }
+
+    .button_service {
+        margin-right: 38px;
+    }
+
+    .service__info {
+        padding-bottom: 18px;
+    }
+
+    .service__info-title {
+        margin-bottom: 10px;
+    }
+
+    .service__info-text {
+        max-width: 203px;
+        margin: 0 auto;
+    }
+
     .prices__advantage-title {
         font-size: 35px;
         line-height: 42px;
-        margin-bottom: 50px;
+        margin-bottom: 58px;
+        margin-left: 15px;
     }
 
     .prices__info {
@@ -178,11 +228,19 @@
     .prices__info-title {
         font-size: 25px;
         line-height: 35px;
-        margin-bottom: 22px;
+        margin-bottom: 29px;
     }
 
     .prices_button {
         margin-bottom: 34px;
+    }
+
+    .contacts__title {
+        margin-left: 0;
+    }
+
+    .contacts__city {
+        margin-bottom: 250px;
     }
 
     .footer {
@@ -199,15 +257,20 @@
     }
 
     .footer__title {
-        margin-bottom: 25px;
+        margin-bottom: 24px;
+    }
+
+    .footer__title-a {
+        margin-left: 0;
     }
 
     .contacts__image-img {
         max-width: 200px;
+        margin-left: 20px;
     }
 }
 
-/* 610px - 767px */
+/* 678px - 767px */
 @media screen and (max-width: 767px) {
     .container {
         padding-left: 25px;
@@ -243,7 +306,10 @@
     .prices__container {
         justify-content: center;
     }
+}
 
+/*610 - 677*/
+@media screen and (max-width: 677px) {
     .prices__info__image {
         display: none;
     }
@@ -251,6 +317,10 @@
 
 /* 425px - 609px */
 @media screen and (max-width: 609px) {
+    .service__item {
+        margin-bottom: 34px;
+    }
+
     .service__items {
         justify-content: center;
     }
@@ -258,17 +328,23 @@
 
 /* 360px - 424px */
 @media screen and (max-width: 424px) {
+    .header {
+        padding: 34px 0;
+    }
+
     .welcome {
-        padding: 24px 0;
+        padding: 20px 0 23px 0;
     }
 
     .welcome__info-title {
         font-size: 25px;
         line-height: 35px;
+        margin-bottom: 22px;
     }
 
     .welcome__info-text {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        margin-left: 0;
     }
 
     .welcome__button {
@@ -290,7 +366,7 @@
     .about__info-text {
         font-size: 15px;
         line-height: 25px;
-        margin-top: 22px;
+        margin-top: 13px;
     }
 
     .about__image {
@@ -304,13 +380,13 @@
     }
 
     .service {
-        padding: 30px 0 27px 0;
+        padding: 26px 0 27px 0;
     }
 
     .service__menu-title {
         font-size: 25px;
         line-height: 33px;
-        margin-bottom: 35px;
+        margin-bottom: 37px;
     }
 
     .button_service {
@@ -333,11 +409,12 @@
         font-size: 25px;
         line-height: 30px;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
+        margin-left: 3px;
     }
 
     .prices__items {
-        padding: 29px 22px;
+        padding: 27px 21px;
         margin-bottom: 19px;
     }
 
@@ -345,7 +422,17 @@
         width: 180px;
         height: 50px;
         font-size: 15px;
-        padding: 0 30px;
+        padding: 0 31px;
+        margin-bottom: 14px;
+    }
+
+    .prices__item-title {
+        font-size: 15px;
+    }
+
+    .prices__item__button {
+        margin-right: 8px;
+        margin-top: 3px;
     }
 
     .prices__info {
@@ -359,7 +446,7 @@
         font-size: 20px;
         text-align: center;
         max-width: 230px;
-        margin-bottom: 14px;
+        margin-bottom: 21px;
     }
 
     .prices_button {
@@ -375,6 +462,7 @@
         font-size: 25px;
         line-height: 33px;
         margin-bottom: 80px;
+        margin-right: 4px;
     }
 
     .contacts {
@@ -383,14 +471,20 @@
 
     .contacts__image-img {
         width: 100px;
+        margin-left: -4px;
     }
 
     .contacts__city {
         margin-bottom: 132px;
+        padding: 0 13px 0 18px;
     }
 
     .footer {
         padding: 22px 0 19px 0;
+    }
+
+    .footer__title {
+        margin-bottom: 13px;
     }
 
     /* Меню бургер */
@@ -409,7 +503,7 @@
 
     .header__burger-span {
         position: absolute;
-        bottom: 8px;
+        bottom: 11px;
         left: 0;
         width: 100%;
         height: 2px;
@@ -418,16 +512,16 @@
     }
 
     .header__burger-span:first-child {
-        top: 0;
+        top: -5px;
     }
 
     .header__burger-span:nth-child(3) {
-        top: 7px;
+        top: 3px;
     }
 
     .header__burger-span:last-child {
         top: auto;
-        bottom: 0;
+        bottom: 3px;
     }
 
     .header__burger.active .header__burger-span {
