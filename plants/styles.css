@@ -39,7 +39,7 @@ body {
 .header {
     background: #EDF2EC;
     font-family: 'Inika', sans-serif;
-    padding: 42px 0;
+    padding: 43px 0;
 }
 
 .container {
@@ -53,14 +53,15 @@ body {
     align-items: center;
 }
 
-.logo {
+.logo__image {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
-.logo__image {
-    text-decoration: none;
+.logo__image-svg {
+    margin-bottom: 11px;
 }
 
 .logo__title {
@@ -84,7 +85,7 @@ body {
 }
 
 .menu__item {
-    margin-right: 46px;
+    margin-right: 47px;
 }
 
 .menu__item:last-child {
@@ -108,7 +109,7 @@ body {
 
 .welcome {
     background: #EDF2EC;
-    padding: 62px 0;
+    padding: 55px 0;
 }
 
 .welcome__container {
@@ -179,7 +180,7 @@ body {
 
 .about {
     background: #FFFFFF;
-    padding: 95px 0;
+    padding: 92px 0;
 }
 
 .about__container {
@@ -203,7 +204,7 @@ body {
     line-height: 52px;
     color: #499A18;
     max-width: 463px;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
     font-weight: 400;
 }
 
@@ -224,7 +225,7 @@ body {
 
 .service {
     background: #EDF2EC;
-    padding: 40px 0 92px 0;
+    padding: 36px 0 92px 0;
 }
 
 .service__container {
@@ -236,7 +237,7 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 64px;
+    margin-bottom: 53px;
 }
 
 .service__menu-title {
@@ -256,7 +257,7 @@ body {
 .button {
     border: 1px solid #E06733;
     border-radius: 5px;
-    padding: 11px;
+    padding: 12px;
     font-size: 20px;
     line-height: 26px;
     color: #E06733;
@@ -269,7 +270,7 @@ body {
 .button_service {
     font-family: 'Inika', sans-serif;
     font-weight: 400;
-    margin-right: 38px;
+    margin-right: 37px;
 }
 
 .button:hover {
@@ -326,6 +327,8 @@ body {
     border: 1px solid #E3E1D5;
     border-radius: 0 0 20px 20px;
     text-align: center;
+    padding: 10px 30px 0 27px;
+    box-sizing: border-box;
 }
 
 .service__info-title {
@@ -333,14 +336,14 @@ body {
     line-height: 20px;
     color: #E06733;
     font-weight: 700;
-    margin: 10px 0 10px 0;
+    margin-bottom: 13px;
 }
 
 .service__info-text {
     font-size: 16px;
     line-height: 20px;
     color: #717171;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 }
 
 .prices {
@@ -439,7 +442,7 @@ body {
     font-size: 0;
 }
 
-.prices__info__image-svg {
+.prices__info__image-img {
     width: 152px;
     height: 175px;
 }
@@ -471,7 +474,7 @@ body {
     font-family: 'Inika', sans-serif;
     color: #499A18;
     text-align: center;
-    margin-top: 7px;
+    margin: 8px 0 0 44px;
 }
 
 .contacts__city {
@@ -524,7 +527,7 @@ body {
 }
 
 .footer__data-span {
-    margin-right: 20px;
+    margin-right: 14px;
 }
 
 .footer__data-a {
@@ -535,6 +538,7 @@ body {
 .footer__title-a {
     color: #000000;
     text-decoration: none;
+    margin-left: 20px;
 }
 
 .footer__icons {
