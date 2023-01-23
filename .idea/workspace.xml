@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c8f839d-12df-4a13-9d43-54b0aaea6b5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/plants/assets/img/image_for_768px/fifth768px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plants/assets/img/image_for_768px/first768px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plants/assets/img/image_for_768px/fourth768px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plants/assets/img/image_for_768px/second768px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plants/assets/img/image_for_768px/sixth768px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plants/assets/img/image_for_768px/third768px.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plants/adaptive.css" beforeDir="false" afterPath="$PROJECT_DIR$/plants/adaptive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plants/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/plants/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plants/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/plants/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="3c8f839d-12df-4a13-9d43-54b0aaea6b5f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +88,7 @@
       <workItem from="1674196813492" duration="682000" />
       <workItem from="1674217172311" duration="1952000" />
       <workItem from="1674243969536" duration="15310000" />
-      <workItem from="1674323904934" duration="10661000" />
+      <workItem from="1674323904934" duration="11549000" />
     </task>
     <servers />
   </component>
