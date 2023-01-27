@@ -416,14 +416,21 @@
     .prices__items {
         padding: 27px 21px;
         margin-bottom: 19px;
+        max-width: 224px;
     }
 
     .prices__item {
         width: 180px;
-        height: 50px;
-        font-size: 15px;
-        padding: 0 31px;
         margin-bottom: 14px;
+    }
+
+    .prices__accordion {
+        width: 180px;
+        padding: 17px 39px 16px 30px;
+    }
+
+    .prices__item.active .prices__content {
+        height: 122px;
     }
 
     .prices__item-title {
@@ -476,7 +483,7 @@
 
     .contacts__city {
         margin-bottom: 132px;
-        padding: 0 13px 0 18px;
+        padding: 0 22px 0 18px;
     }
 
     .footer {

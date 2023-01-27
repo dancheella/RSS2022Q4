@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'Inter';
+    font-family: 'InterBold';
     src: url("assets/fonts/Inter-Bold.ttf");
     font-weight: 700;
 }
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-    font-family: 'Inika';
+    font-family: 'InikaBold';
     src: url("assets/fonts/Inika-Bold.ttf");
     font-weight: 700;
 }
@@ -33,7 +33,6 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
 }
 
 .header {
@@ -103,7 +102,7 @@ body {
 
 .menu__link:hover {
     color: #E06733;
-    font-weight: 700;
+    font-family: 'InikaBold', sans-serif;
     transition: color 0.5s;
 }
 
@@ -136,7 +135,7 @@ body {
 }
 
 .welcome__info-title {
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     font-size: 45px;
     line-height: 50px;
     color: #717171;
@@ -168,7 +167,6 @@ body {
     height: 44px;
     background-color: transparent;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
 }
 
 .welcome__button:hover {
@@ -200,12 +198,12 @@ body {
 
 .about__info-title {
     font-family: 'Inika', sans-serif;
+    font-weight: 400;
     font-size: 40px;
     line-height: 52px;
     color: #499A18;
     max-width: 463px;
     margin-bottom: 37px;
-    font-weight: 400;
 }
 
 .about__info-title span {
@@ -269,7 +267,6 @@ body {
 
 .button_service {
     font-family: 'Inika', sans-serif;
-    font-weight: 400;
     margin-right: 37px;
 }
 
@@ -335,7 +332,7 @@ body {
     font-size: 20px;
     line-height: 20px;
     color: #E06733;
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     margin-bottom: 13px;
 }
 
@@ -358,7 +355,7 @@ body {
 }
 
 .prices__advantage-title {
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     font-size: 40px;
     line-height: 48px;
     color: #000000;
@@ -366,53 +363,146 @@ body {
 }
 
 .prices__items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     border: 1px solid #E3E1D5;
     border-radius: 20px;
+    max-width: 332px;
     padding: 33px 40px;
 }
 
 .prices__item {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter-Bold', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: black;
+}
+
+.prices__accordion {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
-    background: #EDF2EC;
-    border-radius: 20px;
     width: 250px;
     height: 50px;
-    box-sizing: border-box;
-    margin-bottom: 32px;
-}
-
-.prices__item:last-child {
-    margin-bottom: 0;
-}
-
-.prices__item-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
-    color: #000000;
-}
-
-.prices__item__button {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 0;
-    position: relative;
-    background: #D9D9D9;
+    padding: 16px 40px;
+    background: #edf2ec;
+    border-radius: 20px;
+    border: none;
+    transition: all .2s ease;
     cursor: pointer;
 }
 
-.prices__item__button:hover {
+.prices__item.active .prices__accordion {
+    background-color: #D6E7D2;
+    border-radius: 20px 20px 0 0;
+    padding: 16px 40px 12px 40px;
+    cursor: pointer;
+}
+
+.prices__item-title {
+    font-family: 'InterBold', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.prices__item-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 0;
+    position: relative;
+    display: inline-block;
+    background-color: #D9D9D9;
+    transition: all .2s ease-in;
+}
+
+.prices__item-icon:hover {
     background: #a6cda6;
 }
 
-.prices__item__button-svg {
+.prices__item.active .prices__item-icon {
+    background-color: #AEA1A1;
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in;
+    top: 3px;
+}
+
+.icon-svg {
     position: absolute;
     top: 6px;
     left: 5px;
+    stroke: #717171;
+}
+
+.prices__item.active .icon-svg {
+    stroke: #FFFFFF;
+}
+
+.prices__content {
+    height: 0;
+    background-color: #edf2ec;
+    padding: 0 40px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    z-index: -1;
+    transition: all .2s ease;
+}
+
+.prices__item.active .prices__content {
+    height: 104px;
+    z-index: 1;
+    transition: all .2s ease;
+    background-color: #D6E7D2;
+    top: -1px;
+}
+
+.prices__text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+    border-top: 0.5px solid #AEA1A1;
+    padding: 6px 0;
+}
+
+.prices__value {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 7px;
+}
+
+.currency {
+    color: #E06733;
+    font-family: 'InterBold', sans-serif;
+}
+
+.currency-value {
+    font-size: 16px;
+}
+
+.prices__order {
+    width: 86px;
+    height: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+}
+
+.prices__link {
+    font-family: 'InterBold', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+    margin-left: -8px;
 }
 
 .prices__info {
@@ -421,7 +511,7 @@ body {
 }
 
 .prices__info-title {
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     font-size: 40px;
     line-height: 50px;
     color: #000000;
@@ -435,8 +525,7 @@ body {
 .prices_button {
     margin-bottom: 39px;
     margin-left: 0;
-    font-family: 'Inika', sans-serif;
-    font-weight: 700;
+    font-family: 'InikaBold', sans-serif;
 }
 
 .prices__info__image {
@@ -469,10 +558,9 @@ body {
 }
 
 .contacts__title {
-    font-weight: 700;
     font-size: 40px;
     line-height: 52px;
-    font-family: 'Inika', sans-serif;
+    font-family: 'InikaBold', sans-serif;
     color: #499A18;
     text-align: center;
     margin: 8px 0 0 44px;
