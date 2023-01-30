@@ -60,3 +60,61 @@ proLink.addEventListener("click", function () {
 });
 
 
+/* Contacts */
+const card = [
+    {
+        city: 'Yonkers, NY',
+        phone: '+1 914 678 0003',
+        address: '511 Warburton Ave',
+    },
+    {
+        city: 'Canandaigua, NY',
+        phone: '+1 585 393 0001',
+        address: '151 Charlotte Street',
+    },
+    {
+        city: 'Sherrill, NY',
+        phone: '+1 315 908 0004',
+        address: '14 WEST Noyes BLVD',
+    },
+    {
+        city: 'New York City',
+        phone: '+1 212 456 0002',
+        address: '9 East 91st Street',
+    },
+]
+const select = document.querySelector('.contacts__select');
+const title = document.querySelector('.contacts__select-title');
+const contacts = document.querySelector('.contacts__block');
+const itemsContacts = document.querySelectorAll('.contacts__item');
+const contactsCard = document.querySelector('.contacts__card');
+const contactsCity = document.querySelector('.contacts__city');
+const contactsPhone = document.querySelector('.contacts__phone');
+const contactsAddress = document.querySelector('.contacts__address');
+const contactsLink = document.querySelector('.contacts__link');
+
+select.addEventListener('click', () => {
+    if (contacts.classList.contains('active')) contacts.classList.remove('active');
+    else contacts.classList.add('active');
+});
+
+/* select*/
+itemsContacts.forEach((i) => {
+    i.addEventListener('click', function() {
+        title.textContent = this.textContent;
+        contacts.classList.remove('active');
+        title.classList.add('open');
+        contactsCard.classList.add('active');
+        select.classList.add('open');
+        /* card */
+        contactsCity.textContent = this.textContent;
+        card.forEach(i => {
+            if (i.city === this.textContent) {
+                contactsPhone.textContent = i.phone;
+                contactsAddress.textContent = i.address;
+                contactsLink.setAttribute("href", "tel:"+i.phone.replace(/ /g,''));
+            }
+        });
+    });
+});
+

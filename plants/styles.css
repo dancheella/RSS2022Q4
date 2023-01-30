@@ -412,7 +412,7 @@ body {
 .prices__item-icon {
     width: 16px;
     height: 16px;
-    border-radius: 100%;
+    border-radius: 50%;
     border: 0;
     position: relative;
     display: inline-block;
@@ -427,7 +427,7 @@ body {
 .prices__item.active .prices__item-icon {
     background-color: #AEA1A1;
     transform: rotate(180deg);
-    transition: all 0.2s ease-in;
+    transition: all .2s ease-in;
     top: 3px;
 }
 
@@ -566,7 +566,12 @@ body {
     margin: 8px 0 0 44px;
 }
 
-.contacts__city {
+.contacts__block {
+    margin-top: 36px;
+    position: relative;
+}
+
+.contacts__select {
     height: 50px;
     width: 450px;
     background-color: #D6E7D2;
@@ -577,9 +582,11 @@ body {
     padding: 0 35px 0 20px;
     box-sizing: border-box;
     margin-top: 95px;
+    cursor: pointer;
+    transition: all .2s ease;
 }
 
-.contacts__city-title {
+.contacts__select-title {
     font-size: 20px;
     line-height: 40px;
     letter-spacing: 0.05em;
@@ -592,6 +599,109 @@ body {
 
 .contacts__button path {
     stroke: white;
+}
+
+.contacts__block.active .contacts__select,
+.contacts__select.open {
+    letter-spacing: 0.05em;
+    color: #717171;
+    background-color: #C1E698;
+    border: 1px solid #D6E7D2;
+    box-shadow: none;
+    transition: all .3s ease;
+}
+
+.contacts__block.active .contacts__button {
+    background-color: #8BA07E;
+    transform: rotate(180deg);
+    transition: all .3s ease-in;
+}
+
+.contacts__select-title.open {
+    font-size: 16px;
+}
+
+.contacts__options {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #D6E7D2;
+    padding: 27px 35px 31px 20px;
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease-out;
+}
+
+.contacts__block.active .contacts__options {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contacts__item {
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+    border-bottom: 1px solid #D9D9D9;
+    padding-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.contacts__list .contacts__item:hover {
+    color: #717171;
+    border-bottom: 1px solid #717171;
+}
+
+.contacts__card {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    width: 448px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 97px;
+    column-gap: 16px;
+    padding: 16px 32px 33px;
+    border: 1px solid #717171;
+    border-radius: 20px;
+    display: none;
+}
+
+.contacts__card.active {
+    display: flex;
+}
+
+.contacts__label {
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__value {
+    color: #717171;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__link {
+    font-family: 'InikaBold', sans-serif;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #717171;
+    padding: 7px 0;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 120px;
+    margin-top: 16px;
 }
 
 .footer {
