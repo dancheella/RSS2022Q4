@@ -1,13 +1,15 @@
-//Burger menu
+//burger menu
 const menu = document.querySelector('.menu__body')
 const menuBtn = document.querySelector('.header__burger')
 const body = document.body;
 
 if (menu && menuBtn) {
     menuBtn.addEventListener('click', e => {
-        menu.classList.toggle('active')
-        menuBtn.classList.toggle('active')
-        body.classList.toggle('lock')
+        if (e.target.classList.contains('menu__body')) {
+            menu.classList.toggle('active')
+            menuBtn.classList.toggle('active')
+            body.classList.toggle('lock')
+        }
     })
     menu.addEventListener('click', e => {
         if (e.target.classList.contains('menu__body')) {
@@ -25,14 +27,14 @@ if (menu && menuBtn) {
     })
 }
 
-//prices accourdion
+//prices accordion
 const itemsPrices = document.querySelectorAll('.prices__item'); // Выборка всех элементов с классом prices__item из документа.
 const accordion = document.querySelectorAll('.prices__accordion'); // Выборка всех элементов с классом prices__accordion из документа.
 
 accordion.forEach((prices) => {
     prices.addEventListener('click', () => { // Навешивается событие click.
         if (prices.classList.contains('active')) { // Проверка, есть ли у текущего элемента класс "active".
-            prices.classList.remove('active'); // Если есть класс "active", то класс удаляется и у родительского элемента тоже удаляется класс"active".
+            prices.classList.remove('active'); // Если есть класс "active", то класс удаляется и у родительского элемента тоже удаляется класс "active".
             prices.parentElement.classList.remove('active');
         } else {
             itemsPrices.forEach(i => i.classList.remove('active'));
@@ -42,6 +44,16 @@ accordion.forEach((prices) => {
         } //Если же класса "active" нет, то из всех элементов "itemsPrices" и "accordion" удаляется класс "active",
         // а затем добавляется класс "active" для текущего элемента "accordion" и его родителя.
     });
+});
+
+//button
+const learnMore = document.getElementById("learnMore");
+learnMore.addEventListener("click", function () {
+    window.location.href = "#service";
+});
+const priceButton = document.getElementById("priceButton");
+priceButton.addEventListener("click", function () {
+    window.location.href = "#contacts";
 });
 
 //button order
@@ -58,7 +70,6 @@ standardLink.addEventListener("click", function () {
 proLink.addEventListener("click", function () {
     window.location.href = "#contacts";
 });
-
 
 /* Contacts */
 const card = [
@@ -116,5 +127,159 @@ itemsContacts.forEach((i) => {
             }
         });
     });
+});
+
+// смена фокуса service
+const gardenButton = document.getElementById('gardens');
+const lawnButton = document.getElementById('lawn');
+const plantingButton = document.getElementById('planting');
+
+const gardensItems = [...document.querySelectorAll('.garden')];
+const lawnItems = [...document.querySelectorAll('.lawn')];
+const plantingItems = [...document.querySelectorAll('.planting')];
+
+let listActiveButtons = [];
+let isActiveGardenButton = false;
+let isActiveLawnButton = false;
+let isActivePlantingButton = false;
+
+function toggleBlurAllServiceItems() {
+    toggleBlurItems(gardensItems, isActiveGardenButton);
+    toggleBlurItems(lawnItems, isActiveLawnButton);
+    toggleBlurItems(plantingItems, isActivePlantingButton);
+}
+
+function toggleBlurItems(items, isActiveItems) {
+    if (isActiveItems) {
+        items.forEach(el => {
+            el.style = 'filter: blur(0px)';
+            el.classList.remove('disable-hover');
+        })
+    } else {
+        items.forEach(el => {
+            el.style = 'filter: blur(2px)';
+            el.classList.add('disable-hover');
+        })
+    }
+}
+//service__buttons
+gardenButton.addEventListener("click", function (e) {
+    if (isActiveGardenButton) {
+        isActiveGardenButton = false;
+        gardenButton.classList.remove('active-button');
+
+        let index = listActiveButtons.indexOf(gardenButton);
+        if (index !== -1) {
+            listActiveButtons.splice(index, 1);
+        }
+
+        if (isActiveLawnButton || isActivePlantingButton) {
+            toggleBlurItems(gardensItems, false);
+        } else {
+            toggleBlurItems(gardensItems, true);
+            toggleBlurItems(lawnItems, true);
+            toggleBlurItems(plantingItems, true);
+        }
+    } else {
+        if (listActiveButtons.length < 2 && !listActiveButtons.includes(gardenButton)) {
+            gardenButton.classList.add('active-button');
+            isActiveGardenButton = true;
+            listActiveButtons.push(gardenButton);
+
+        } else if (listActiveButtons.length >= 2 && !listActiveButtons.includes(gardenButton)) {
+            if (listActiveButtons[0] === lawnButton) {
+                isActiveLawnButton = false;
+            } else if (listActiveButtons[0] === plantingButton) {
+                isActivePlantingButton = false;
+            }
+            listActiveButtons[0].classList.remove('active-button');
+
+            gardenButton.classList.add('active-button');
+            isActiveGardenButton = true;
+            listActiveButtons = listActiveButtons.slice(1);
+            listActiveButtons.push(gardenButton);
+        }
+        toggleBlurAllServiceItems();
+    }
+});
+
+lawnButton.addEventListener("click", function (e) {
+    if (isActiveLawnButton) {
+        isActiveLawnButton = false;
+        lawnButton.classList.remove('active-button');
+
+        let index = listActiveButtons.indexOf(lawnButton);
+        if (index !== -1) {
+            listActiveButtons.splice(index, 1);
+        }
+
+        if (isActiveGardenButton || isActivePlantingButton) {
+            toggleBlurItems(lawnItems, false);
+        } else {
+            toggleBlurItems(gardensItems, true);
+            toggleBlurItems(lawnItems, true);
+            toggleBlurItems(plantingItems, true);
+        }
+    } else {
+        if (listActiveButtons.length < 2 && !listActiveButtons.includes(lawnButton)) {
+            lawnButton.classList.add('active-button');
+            isActiveLawnButton = true;
+            listActiveButtons.push(lawnButton);
+
+        } else if (listActiveButtons.length >= 2 && !listActiveButtons.includes(lawnButton)) {
+            if (listActiveButtons[0] === gardenButton) {
+                isActiveGardenButton = false;
+            } else if (listActiveButtons[0] === plantingButton) {
+                isActivePlantingButton = false;
+            }
+            listActiveButtons[0].classList.remove('active-button');
+
+            lawnButton.classList.add('active-button');
+            isActiveLawnButton = true;
+            listActiveButtons = listActiveButtons.slice(1);
+            listActiveButtons.push(lawnButton);
+        }
+        toggleBlurAllServiceItems();
+    }
+
+});
+
+plantingButton.addEventListener("click", function (e) {
+    if (isActivePlantingButton) {
+        isActivePlantingButton = false;
+        plantingButton.classList.remove('active-button');
+
+        let index = listActiveButtons.indexOf(plantingButton);
+        if (index !== -1) {
+            listActiveButtons.splice(index, 1);
+        }
+
+        if (isActiveLawnButton || isActiveGardenButton) {
+            toggleBlurItems(plantingItems, false);
+        } else {
+            toggleBlurItems(gardensItems, true);
+            toggleBlurItems(lawnItems, true);
+            toggleBlurItems(plantingItems, true);
+        }
+    } else {
+        if (listActiveButtons.length < 2 && !listActiveButtons.includes(plantingButton)) {
+            plantingButton.classList.add('active-button');
+            isActivePlantingButton = true;
+            listActiveButtons.push(plantingButton);
+        } else if (listActiveButtons.length >= 2 && !listActiveButtons.includes(plantingButton)) {
+            if (listActiveButtons[0] === lawnButton) {
+                isActiveLawnButton = false;
+            } else if (listActiveButtons[0] === gardenButton) {
+                isActiveGardenButton = false;
+            }
+            listActiveButtons[0].classList.remove('active-button');
+
+            plantingButton.classList.add('active-button');
+            isActivePlantingButton = true;
+            listActiveButtons = listActiveButtons.slice(1);
+            listActiveButtons.push(plantingButton);
+        }
+        toggleBlurAllServiceItems();
+    }
 });
 

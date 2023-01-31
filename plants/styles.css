@@ -277,6 +277,13 @@ body {
     transition: .5s;
 }
 
+.active-button {
+    background-color: #E06733;
+    box-shadow: 0 0 6px 4px rgba(147, 28, 28, 0.5);
+    color: aqua;
+    transition: .5s;
+}
+
 .service__items {
     display: flex;
     flex-wrap: wrap;
