@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'Inter';
+    font-family: 'InterBold';
     src: url("assets/fonts/Inter-Bold.ttf");
     font-weight: 700;
 }
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-    font-family: 'Inika';
+    font-family: 'InikaBold';
     src: url("assets/fonts/Inika-Bold.ttf");
     font-weight: 700;
 }
@@ -33,7 +33,6 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
 }
 
 .header {
@@ -103,7 +102,7 @@ body {
 
 .menu__link:hover {
     color: #E06733;
-    font-weight: 700;
+    font-family: 'InikaBold', sans-serif;
     transition: color 0.5s;
 }
 
@@ -136,7 +135,7 @@ body {
 }
 
 .welcome__info-title {
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     font-size: 45px;
     line-height: 50px;
     color: #717171;
@@ -168,7 +167,6 @@ body {
     height: 44px;
     background-color: transparent;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
 }
 
 .welcome__button:hover {
@@ -200,12 +198,12 @@ body {
 
 .about__info-title {
     font-family: 'Inika', sans-serif;
+    font-weight: 400;
     font-size: 40px;
     line-height: 52px;
     color: #499A18;
     max-width: 463px;
     margin-bottom: 37px;
-    font-weight: 400;
 }
 
 .about__info-title span {
@@ -269,11 +267,17 @@ body {
 
 .button_service {
     font-family: 'Inika', sans-serif;
-    font-weight: 400;
     margin-right: 37px;
 }
 
 .button:hover {
+    background-color: #E06733;
+    box-shadow: 0 0 6px 4px rgba(147, 28, 28, 0.5);
+    color: aqua;
+    transition: .5s;
+}
+
+.active-button {
     background-color: #E06733;
     box-shadow: 0 0 6px 4px rgba(147, 28, 28, 0.5);
     color: aqua;
@@ -335,7 +339,7 @@ body {
     font-size: 20px;
     line-height: 20px;
     color: #E06733;
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     margin-bottom: 13px;
 }
 
@@ -358,7 +362,7 @@ body {
 }
 
 .prices__advantage-title {
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     font-size: 40px;
     line-height: 48px;
     color: #000000;
@@ -366,53 +370,146 @@ body {
 }
 
 .prices__items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     border: 1px solid #E3E1D5;
     border-radius: 20px;
+    max-width: 332px;
     padding: 33px 40px;
 }
 
 .prices__item {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter-Bold', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: black;
+}
+
+.prices__accordion {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
-    background: #EDF2EC;
-    border-radius: 20px;
     width: 250px;
     height: 50px;
-    box-sizing: border-box;
-    margin-bottom: 32px;
+    padding: 16px 40px;
+    background: #edf2ec;
+    border-radius: 20px;
+    border: none;
+    transition: all .2s ease;
+    cursor: pointer;
 }
 
-.prices__item:last-child {
-    margin-bottom: 0;
+.prices__item.active .prices__accordion {
+    background-color: #D6E7D2;
+    border-radius: 20px 20px 0 0;
+    padding: 16px 40px 12px 40px;
+    cursor: pointer;
 }
 
 .prices__item-title {
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     font-size: 20px;
     line-height: 20px;
-    color: #000000;
 }
 
-.prices__item__button {
+.prices__item-icon {
     width: 16px;
     height: 16px;
     border-radius: 50%;
     border: 0;
     position: relative;
-    background: #D9D9D9;
-    cursor: pointer;
+    display: inline-block;
+    background-color: #D9D9D9;
+    transition: all .2s ease-in;
 }
 
-.prices__item__button:hover {
+.prices__item-icon:hover {
     background: #a6cda6;
 }
 
-.prices__item__button-svg {
+.prices__item.active .prices__item-icon {
+    background-color: #AEA1A1;
+    transform: rotate(180deg);
+    transition: all .2s ease-in;
+    top: 3px;
+}
+
+.icon-svg {
     position: absolute;
     top: 6px;
     left: 5px;
+    stroke: #717171;
+}
+
+.prices__item.active .icon-svg {
+    stroke: #FFFFFF;
+}
+
+.prices__content {
+    height: 0;
+    background-color: #edf2ec;
+    padding: 0 40px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    z-index: -1;
+    transition: all .2s ease;
+}
+
+.prices__item.active .prices__content {
+    height: 104px;
+    z-index: 1;
+    transition: all .2s ease;
+    background-color: #D6E7D2;
+    top: -1px;
+}
+
+.prices__text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+    border-top: 0.5px solid #AEA1A1;
+    padding: 6px 0;
+}
+
+.prices__value {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 7px;
+}
+
+.currency {
+    color: #E06733;
+    font-family: 'InterBold', sans-serif;
+}
+
+.currency-value {
+    font-size: 16px;
+}
+
+.prices__order {
+    width: 86px;
+    height: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+}
+
+.prices__link {
+    font-family: 'InterBold', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+    margin-left: -8px;
 }
 
 .prices__info {
@@ -421,7 +518,7 @@ body {
 }
 
 .prices__info-title {
-    font-weight: 700;
+    font-family: 'InterBold', sans-serif;
     font-size: 40px;
     line-height: 50px;
     color: #000000;
@@ -435,8 +532,7 @@ body {
 .prices_button {
     margin-bottom: 39px;
     margin-left: 0;
-    font-family: 'Inika', sans-serif;
-    font-weight: 700;
+    font-family: 'InikaBold', sans-serif;
 }
 
 .prices__info__image {
@@ -469,16 +565,19 @@ body {
 }
 
 .contacts__title {
-    font-weight: 700;
     font-size: 40px;
     line-height: 52px;
-    font-family: 'Inika', sans-serif;
+    font-family: 'InikaBold', sans-serif;
     color: #499A18;
     text-align: center;
-    margin: 8px 0 0 44px;
+    margin: 14px 0 0 44px;
 }
 
-.contacts__city {
+.contacts__block {
+    position: relative;
+}
+
+.contacts__select {
     height: 50px;
     width: 450px;
     background-color: #D6E7D2;
@@ -488,10 +587,12 @@ body {
     justify-content: space-between;
     padding: 0 35px 0 20px;
     box-sizing: border-box;
-    margin-top: 95px;
+    margin-top: 102px;
+    cursor: pointer;
+    transition: all .2s ease;
 }
 
-.contacts__city-title {
+.contacts__select-title {
     font-size: 20px;
     line-height: 40px;
     letter-spacing: 0.05em;
@@ -504,6 +605,114 @@ body {
 
 .contacts__button path {
     stroke: white;
+}
+
+.contacts__block.active .contacts__select,
+.contacts__select.open {
+    letter-spacing: 0.05em;
+    color: #717171;
+    background-color: #C1E698;
+    border: 1px solid #D6E7D2;
+    box-shadow: none;
+    transition: all .3s ease;
+}
+
+.contacts__block.active .contacts__button {
+    background-color: #8BA07E;
+    transform: rotate(180deg);
+    transition: all .3s ease-in;
+}
+
+.contacts__select-title.open {
+    font-size: 16px;
+}
+
+.contacts__options {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #D6E7D2;
+    padding: 27px 35px 31px 20px;
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease-out;
+}
+
+.contacts__block.active .contacts__options {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contacts__item {
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+    border-bottom: 1px solid #D9D9D9;
+    padding-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.contacts__list .contacts__item:hover {
+    color: #717171;
+    border-bottom: 1px solid #717171;
+}
+
+.contacts__card {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    width: 448px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 98px;
+    column-gap: 16px;
+    padding: 16px 33px 31px;
+    border: 1px solid #717171;
+    border-radius: 20px;
+    display: none;
+}
+
+.contacts__card.active {
+    display: flex;
+}
+
+.contacts__label {
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__value {
+    color: #717171;
+    display: flex;
+    flex-direction: column;
+}
+
+contact__city {
+    margin-left: 2px;
+}
+
+.contacts__link {
+    font-family: 'InikaBold', sans-serif;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #717171;
+    padding: 7px 0;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 120px;
+    margin-top: 16px;
+    letter-spacing: 0;
 }
 
 .footer {

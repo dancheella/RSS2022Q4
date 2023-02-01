@@ -50,6 +50,11 @@
         margin-bottom: 38px;
     }
 
+    .service__info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .service__image {
         width: 300px;
     }
@@ -68,15 +73,16 @@
     }
 
     .contacts__title {
-        margin-top: 0;
-        order: 1;
-        margin-bottom: 100px;
+        margin: 0 0 61px 0;
     }
 
-    .contacts__city {
+    .contacts__block {
+        margin-bottom: 54px;
+    }
+
+    .contacts__select {
         order: 2;
         margin-top: 0;
-        margin-bottom: 100px;
     }
 
     .contacts__image {
@@ -239,8 +245,13 @@
         margin-left: 0;
     }
 
-    .contacts__city {
-        margin-bottom: 250px;
+    .contacts__card {
+        top: 111px;
+    }
+
+    .contacts__link {
+        flex: 1;
+        margin-left: -3px;
     }
 
     .footer {
@@ -283,10 +294,6 @@
         justify-content: center;
     }
 
-    .contacts__city {
-        width: 300px;
-    }
-
     .menu__item {
         margin-right: 10px;
     }
@@ -323,6 +330,28 @@
 
     .service__items {
         justify-content: center;
+    }
+
+    .contacts__select {
+        width: 350px;
+    }
+
+    .contacts__card {
+        max-width: 350px;
+        padding: 23px 37px;
+    }
+
+    .contacts__office {
+        line-height: 20px;
+    }
+
+    .contacts__address {
+        line-height: 20px;
+
+    }
+
+    .contacts__link {
+        margin-left: -40px;
     }
 }
 
@@ -416,14 +445,21 @@
     .prices__items {
         padding: 27px 21px;
         margin-bottom: 19px;
+        max-width: 224px;
+        gap: 14px;
     }
 
     .prices__item {
         width: 180px;
-        height: 50px;
-        font-size: 15px;
-        padding: 0 31px;
-        margin-bottom: 14px;
+    }
+
+    .prices__accordion {
+        width: 180px;
+        padding: 17px 39px 16px 30px;
+    }
+
+    .prices__item.active .prices__content {
+        height: 122px;
     }
 
     .prices__item-title {
@@ -461,7 +497,7 @@
     .contacts__title {
         font-size: 25px;
         line-height: 33px;
-        margin-bottom: 80px;
+        margin-bottom: 43px;
         margin-right: 4px;
     }
 
@@ -474,9 +510,21 @@
         margin-left: -4px;
     }
 
-    .contacts__city {
-        margin-bottom: 132px;
-        padding: 0 13px 0 18px;
+    .contacts__select {
+        width: 300px;
+        padding: 0 22px 0 18px;
+    }
+
+    .contacts__card {
+        max-width: 300px;
+        top: 99px;
+    }
+
+    .contacts__label {
+        max-width: 65px;
+    }
+    .contacts__link {
+        margin-left: -25px;
     }
 
     .footer {
@@ -582,8 +630,14 @@
         max-width: 270px;
     }
 
-    .contacts__city {
+    .contacts__select {
         width: 270px;
+    }
+
+    .contacts__card {
+        max-width: 270px;
+        font-size: 14px;
+        gap: 3px;
     }
 
     .footer__container {
