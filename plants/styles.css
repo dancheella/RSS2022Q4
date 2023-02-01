@@ -377,7 +377,6 @@ body {
     border-radius: 20px;
     max-width: 332px;
     padding: 33px 40px;
-    color: black;
 }
 
 .prices__item {
@@ -415,6 +414,7 @@ body {
     font-family: 'InterBold', sans-serif;
     font-size: 20px;
     line-height: 20px;
+    -webkit-text-fill-color: black;
 }
 
 .prices__item-icon {
