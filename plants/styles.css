@@ -377,6 +377,7 @@ body {
     border-radius: 20px;
     max-width: 332px;
     padding: 33px 40px;
+    color: black;
 }
 
 .prices__item {
