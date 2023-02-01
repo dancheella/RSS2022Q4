@@ -17,7 +17,8 @@
     <div class="container header__container">
         <div class="logo">
             <a href="#" class="logo__image">
-                <svg class="logo__image-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="logo__image-svg" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
                     <path
                             d="M2.52667 20.9466L10.9212 3.66409C10.9212 3.66409 3.57596 7.00909 2.00199 10.9116C0.428017 14.8141 0.927102 18.4038 2.00201 20.9466"
                             stroke="#499A18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -71,7 +72,7 @@
                     industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </div>
-                <button class="welcome__button">LEARN MORE</button>
+                <button id="learnMore" class="welcome__button">LEARN MORE</button>
             </div>
         </div>
     </section>
@@ -99,48 +100,48 @@
             <div class="service__menu">
                 <h2 class="service__menu-title">Service and our projects</h2>
                 <div class="service__buttons">
-                    <button class="button button_service">Gardens</button>
-                    <button class="button button_service">Lawn</button>
-                    <button class="button button_service">Planting</button>
+                    <button id="gardens" class="button button_service">Gardens</button>
+                    <button id="lawn" class="button button_service">Lawn</button>
+                    <button id="planting" class="button button_service">Planting</button>
                 </div>
             </div>
             <div class="service__items">
-                <div class="service__item">
+                <div class="service__item garden">
                     <div class="service__image first"></div>
                     <div class="service__info">
                         <p class="service__info-title">Garden care</p>
                         <p class="service__info-text">Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
-                <div class="service__item">
+                <div class="service__item planting">
                     <div class="service__image second"></div>
                     <div class="service__info">
                         <p class="service__info-title">Planting</p>
                         <p class="service__info-text">Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
-                <div class="service__item">
+                <div class="service__item lawn">
                     <div class="service__image third"></div>
                     <div class="service__info">
                         <p class="service__info-title">Lawn care</p>
                         <p class="service__info-text">Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
-                <div class="service__item">
+                <div class="service__item planting">
                     <div class="service__image fourth"></div>
                     <div class="service__info">
                         <p class="service__info-title">Planting</p>
                         <p class="service__info-text">Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
-                <div class="service__item">
+                <div class="service__item garden">
                     <div class="service__image fifth"></div>
                     <div class="service__info">
                         <p class="service__info-title">Garden care</p>
                         <p class="service__info-text">Lorem Ipsum has been the industry</p>
                     </div>
                 </div>
-                <div class="service__item">
+                <div class="service__item planting">
                     <div class="service__image sixth"></div>
                     <div class="service__info">
                         <p class="service__info-title">Planting</p>
@@ -157,46 +158,82 @@
                 <h2 class="prices__advantage-title">Prices</h2>
                 <div class="prices__items">
                     <div class="prices__item">
-                        <span class="prices__item-title">Basics</span>
-                        <button class="prices__item__button">
-                            <svg class="prices__item__button-svg" width="6" height="4" viewBox="0 0 6 4" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.00003 3.0129L1.00003 1.01302" stroke="#717171" stroke-width="0.5"
-                                      stroke-linecap="round"/>
-                                <path d="M3 3.0127L5 1.0127" stroke="#717171" stroke-width="0.5"
-                                      stroke-linecap="round"/>
-                            </svg>
+                        <button class="prices__accordion">
+                            <span class="prices__item-title">Basics</span>
+                            <span class="prices__item-icon">
+                                <svg class="icon-svg" width="6" height="4" viewBox="0 0 6 4"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.00003 3.0129L1.00003 1.01302" stroke-width="0.5"
+                                          stroke-linecap="round"/>
+                                    <path d="M3 3.0127L5 1.0127" stroke-width="0.5" stroke-linecap="round"/>
+                                </svg>
+                            </span>
                         </button>
+                        <div class="prices__content">
+                            <div class="prices__text">Release of Letraset sheets containing Lorem Ipsum passages, and
+                                more recently
+                            </div>
+                            <div class="prices__value"><span class="currency">$<span class="currency-value">15</span>
+                                </span> / per hour
+                            </div>
+                            <button id="basicsLink" class="prices__order">
+                                <span class="prices__link">Order</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="prices__item">
-                        <span class="prices__item-title">Standard</span>
-                        <button class="prices__item__button">
-                            <svg class="prices__item__button-svg" width="6" height="4" viewBox="0 0 6 4" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.00003 3.0129L1.00003 1.01302" stroke="#717171" stroke-width="0.5"
-                                      stroke-linecap="round"/>
-                                <path d="M3 3.0127L5 1.0127" stroke="#717171" stroke-width="0.5"
-                                      stroke-linecap="round"/>
+                        <button class="prices__accordion">
+                            <span class="prices__item-title">Standard</span>
+                            <span class="prices__item-icon">
+                                <svg class="icon-svg" width="6" height="4" viewBox="0 0 6 4"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.00003 3.0129L1.00003 1.01302" stroke-width="0.5" stroke-linecap="round"/>
+                                <path d="M3 3.0127L5 1.0127" stroke-width="0.5" stroke-linecap="round"/>
                             </svg>
+                            </span>
                         </button>
+                        <div class="prices__content">
+                            <div class="prices__text">Release of Letraset sheets containing Lorem Ipsum passages, and
+                                more
+                                recently
+                            </div>
+                            <div class="prices__value"><span class="currency">$<span class="currency-value">25</span>
+                                </span> / per hour
+                            </div>
+                            <button id="standardLink" class="prices__order">
+                                <span class="prices__link">Order</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="prices__item">
-                        <span class="prices__item-title">Pro care</span>
-                        <button class="prices__item__button">
-                            <svg class="prices__item__button-svg" width="6" height="4" viewBox="0 0 6 4" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.00003 3.0129L1.00003 1.01302" stroke="#717171" stroke-width="0.5"
-                                      stroke-linecap="round"/>
-                                <path d="M3 3.0127L5 1.0127" stroke="#717171" stroke-width="0.5"
-                                      stroke-linecap="round"/>
+                        <button class="prices__accordion">
+                            <span class="prices__item-title">Pro care</span>
+                            <span class="prices__item-icon">
+                                <svg class="icon-svg" width="6" height="4" viewBox="0 0 6 4"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.00003 3.0129L1.00003 1.01302" stroke-width="0.5" stroke-linecap="round"/>
+                                <path d="M3 3.0127L5 1.0127" stroke-width="0.5" stroke-linecap="round"/>
                             </svg>
+                            </span>
                         </button>
+                        <div class="prices__content">
+                            <div class="prices__text">Release of Letraset sheets containing Lorem Ipsum passages, and
+                                more
+                                recently
+                            </div>
+                            <div class="prices__value"><span class="currency">$<span class="currency-value">35</span>
+                                </span> / per hour
+                            </div>
+                            <button id="proLink" class="prices__order">
+                                <span class="prices__link">Order</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="prices__info">
                 <div class="prices__info-title">Our best <span>gardeners</span> are ready to help you</div>
-                <button class="button prices_button">Contact us</button>
+                <button class="button prices_button" id="priceButton">Contact us</button>
                 <div class="prices__info__image">
                     <img class="prices__info__image-img" src="assets/img/leafs.png" alt="Leafs">
                 </div>
@@ -210,15 +247,40 @@
                 <img class="contacts__image-img" src="assets/img/woman.png" alt="Woman">
             </div>
             <h2 class="contacts__title">Contact us</h2>
-            <div class="contacts__city">
-                <span class="contacts__city-title">City</span>
-                <button class="contacts__button prices__item__button">
-                    <svg class="prices__item__button-svg" width="6" height="4" viewBox="0 0 6 4"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.00003 3.0129L1.00003 1.01302" stroke-width="0.5" stroke-linecap="round"/>
-                        <path d="M3 3.0127L5 1.0127" stroke-width="0.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
+            <div class="contacts__content">
+                <div class="contacts__block">
+                    <div class="contacts__select">
+                        <span class="contacts__select-title">City</span>
+                        <span class="prices__item-icon contacts__button">
+                            <svg class="icon-svg" width="6" height="4" viewBox="0 0 6 4"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.00003 3.0129L1.00003 1.01302" stroke-width="0.5" stroke-linecap="round"/>
+                                <path d="M3 3.0127L5 1.0127" stroke-width="0.5" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="contacts__options">
+                        <div class="contacts__list">
+                            <span class="contacts__item">Canandaigua, NY</span>
+                            <span class="contacts__item">New York City</span>
+                            <span class="contacts__item">Yonkers, NY</span>
+                            <span class="contacts__item">Sherrill, NY</span>
+                        </div>
+                    </div>
+                    <div class="contacts__card">
+                        <div class="contacts__label">
+                            <span>City:</span>
+                            <span>Phone:</span>
+                            <span class="contacts__office">Office adress:</span>
+                        </div>
+                        <div class="contacts__value">
+                            <span class="contacts__city">City not selected</span>
+                            <span class="contacts__phone">City not selected</span>
+                            <span class="contacts__address">City not selected</span>
+                            <a href="tel:" class="contacts__link">Call us</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
