@@ -5,11 +5,9 @@ const body = document.body;
 
 if (menu && menuBtn) {
     menuBtn.addEventListener('click', e => {
-        if (e.target.classList.contains('menu__body')) {
             menu.classList.toggle('active')
             menuBtn.classList.toggle('active')
             body.classList.toggle('lock')
-        }
     })
     menu.addEventListener('click', e => {
         if (e.target.classList.contains('menu__body')) {
@@ -282,4 +280,3 @@ plantingButton.addEventListener("click", function (e) {
         toggleBlurAllServiceItems();
     }
 });
-
