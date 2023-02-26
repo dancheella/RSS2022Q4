@@ -199,7 +199,7 @@ const durationItem = document.querySelector('.duration');
 const title = document.querySelector('.song-name');
 function playAudio() {
     audio.src = playList[playNum].src;
-    audio.currentTime = playNum;
+    audio.currentTime = 0;
     playItems[playNum].classList.add('item-active'); //активный трек
     durationItem.innerText = `${playList[playNum].duration}`; //продолжительность трека
     title.innerText = `${playItems[playNum].textContent}`; //название активного трека
@@ -207,6 +207,7 @@ function playAudio() {
         audio.play();
         isPlay = true;
         setTimer();
+        getDurationCount()
     } else {
         audio.pause();
         clearTimeout(setTimer);
@@ -277,8 +278,28 @@ function setTimer() {
     else {
         timerItem.innerHTML = min + ':' + sec;
     }
-    setTimeout(setTimer, 1000);
-    // setTimeout(getProgressWidth, 1000);
+    setInterval(setTimer, 1000);
+    setTimeout(getProgressWidth, 1000);
+}
+
+// Вычисление длительности активного трека
+let durationCount;
+function getDurationCount() {
+    let arrMinAndSec = playList[playNum].duration.split(':');
+    durationCount = +arrMinAndSec[0] * 60 + +arrMinAndSec[1];
+}
+// getDurationCount();
+
+// Прогресс песни
+const progressStatus = document.querySelector('.progress-colored');
+
+function getProgressWidth() {
+    const progressCount = Math.round((audio.currentTime / durationCount) * 100);
+    progressStatus.style.width = `${progressCount || 0}%`;
+
+    if (progressCount >= 100) {
+        playNext();
+    }
 }
 
 
